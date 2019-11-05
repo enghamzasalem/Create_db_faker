@@ -1,10 +1,5 @@
-# create db 
+# create db
 # psql -d template1
-
-
-
-
-
 import psycopg2
 # https://stackabuse.com/working-with-postgresql-in-python/
 con = psycopg2.connect(database="postgres", user="postgres",
@@ -39,7 +34,5 @@ for row in rows:
     print("AGE =", row[2])
     print("COURSE =", row[3])
     print("DEPARTMENT =", row[4], "\n")
-
-
 print("Operation done successfully")
 con.close()
