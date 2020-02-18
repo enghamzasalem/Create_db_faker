@@ -36,3 +36,8 @@ for row in rows:
     print("DEPARTMENT =", row[4], "\n")
 print("Operation done successfully")
 con.close()
+
+#from faker import Faker
+#fake = Faker()
+#for _ in range(100):
+#  print(fake.name(),fake.address())
