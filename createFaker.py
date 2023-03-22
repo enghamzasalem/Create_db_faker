@@ -17,7 +17,7 @@ print("Table created successfully")
 fake = Faker()
 for i in range(100000):
     print(i)
-    cur.execute("INSERT INTO CUSTOMER (ID,Name,Address,review) VALUES ('"+ str(i)+"','"+fake.name()+"','"+fake.address()+"','"+fake.text()+"')")
+    cur.execute("INSERT INTO CUSTOMER (ID,Name,Address,review) VALUES (%s, %s, %s, %s)", (i, fake.name(), fake.address(), fake.text()))
     con.commit()
  
 
